@@ -1,6 +1,8 @@
 /*The root variables section*/
 :root{
     /*color variables*/
+    --color-yellow-green : rgba(154,205,50)
+    --color-blueviolet: rgba(138,43,248);
     --color-white: rgba(255,255,255,1);
     --color-light: rgba(255,255,255,0.7);
     --color-dark: rgba(0,0,0,1);
@@ -57,13 +59,14 @@ body{
     padding: 0;
     margin: 0;
     overflow: hidden;
+
 }
 a{
     text-decoration: none;
     color: var(--color-white);
 }
 a:hover{
-    color: var(--color-light-green);
+    color: var(--color-blue);
 }
 
 /*Header styling*/
@@ -71,22 +74,202 @@ a:hover{
 /*min for screen sizes*/
 header{
     width: 100%;
-    min-height: 10vh;
+    height: auto;
     background-color: var(--color-purple);
     font-weight: bold;
     font-size: larger;
+    background-color: var(--color-white);
+    display: flex;
+    gap: 30rem;
+
+}
+header .menu-item{
+    color: var(--color-blue);
+}
+header .menu-item:hover{
+    color: var(--color-green);
 }
 .r-section{
     width: 15rem;
-    min-height: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5%;
+    margin-left: 5%;
+    gap: 1rem;
+}
+.l-section{
+    width: 40rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 .logo{
     clip-path: circle(
         100% at 0% 50%
     );
+}
+.logo-name{
+    color: var(--color-blueviolet);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.first-title{
+    color: var(--color-blue);
+    font-weight: bolder;
+}
+
+/*Everything after the header*/
+.after-header{
+    display: flex;
+    gap: 1rem;
+    background-color: var(--color-dark);
+    border: 0.3rem solid var(--color-dark);
+    /*gap doesn't work over here */
+}
+
+
+/*aside css properties*/
+aside{
+    /*position sticky works fine in grids
+    fixed and absolute would mess up*/
+    position: sticky;
+    border: 0.1rem solid var(--color-dark);
+    top: 0;
+    left: 1rem;
+    z-index: 3;
+    margin-right: 0rem;
+    margin-left: 0;
+    backdrop-filter: blur(5em);
+    flex: 1 1 12rem;
+    /*width: 12rem;*/
+    height: 85vh;
+    background-color: var(--color-light-blue);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0.25rem 0.25rem 0.25rem var(--color-blue);
+}
+.sidebar .menu-item{
+    background-color: var(--color-white);
+}
+aside:hover{
+    box-shadow: none;
+}
+.logo-aside{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-left: 0.7rem;
+}
+aside .menu-item:last-child{
+    position: absolute;
+    bottom: 5rem;
+}
+aside .menu-item{
+    margin-left: 2rem;
+    display: flex;
+    background-color: var(--color-light-blue);
+    justify-content: space-between;
+    width: var(--menu-item-width);
+    line-height: var(--menu-item-line-height);
+    padding: var(--card-padding);
+    margin-bottom: var(--menu-item-bottom);
+    border-radius: var(--menu-item-radius);
+    /*for a smoooth transition of all properties*/
+    transition: all var(--fast-smooth-transition);
+}
+aside .menu-item:hover{
+    margin-left: 0;
+    margin-bottom: 1rem;
+    background-color: var(--color-blue);
+}
+.icon > span{
+    color: var(--color-blue);
+}
+.icon > span:hover{
+    color: var(--color-white);
+}
+aside .menu-title{
+    font-weight: bold;
+    color: var(--color-light-dark);
+}
+
+
+/*The main part*/
+.middle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+    border: 0.2rem solid var(--color-dark);
+    flex: 1 1 58%;
+    margin-right: 0;
+    height: 70vh;
+    background-color: var(--color-blue);
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+}
+/*Intro div*/
+.intro-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.intro-div h1{
+    color: white;
+}
+.intro-div .fa-cart-shopping{
+    color: var(--color-yellow-green);
+    font-size: 2rem;
+}
+
+/*search bar */
+.search-bar{
+    width: 30rem;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+}
+.search-input{
+    width:90%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+.search-input::placeholder{
+    font-size: 1rem;
+    color: var(--color-blue);
+    font-weight: bold;
+}
+/*The button for searhing as well as you can press enter to search anything. */
+.search-bar button{
+    outline: none;
+    width: 10%;
+    height: 100%;
+    border: 0;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+.fa-magnifying-glass{
+    font-size: 1.7rem;
+    border: 0;
+}
+
+.left-section{
+    margin-top: 1rem;
+    position: relative;
+    flex: 1 1 20rem;
+    background-color: var(--color-white);
+    margin-right: 1rem;
+    border-radius: 0.5rem;
 }

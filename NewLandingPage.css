@@ -1,0 +1,182 @@
+/*The root variables section*/
+:root{
+    /*color variables*/
+    --color-alice-blue: aliceblue;
+    --color-yellow-green : rgba(154,205,50,1);
+    --color-blue-violet: rgba(138,43,226,1);
+    --color-white: rgba(255,255,255,1);
+    --color-light: rgba(255,255,255,0.7);
+    --color-dark: rgba(0,0,0,1);
+    --color-light-dark: rgba(0,0,0,0.5);
+    --color-grey: rgba(155,155,155,1);
+    --color-primary: rgba(0,0,255,0.8);
+    --color-danger: rgba(255,70,70,1);
+    --color-blue: rgba(0,0,255,0.8);
+    --color-light-blue: rgba(180,180,255,1);
+    --color-lighter-blue: rgba(220,220,255,1);
+    --color-success: rgba(0,255,0,0.8);
+    --color-light-green: rgba(0,255,0,0.5);
+    --color-green: rgba(0,255,0,1);
+    --color-pink: rgba(255,0,150,1);
+    --color-light-pink: rgba(255,0,150,0.4);
+    --color-purple: rgba(50,0,255,1);
+    --color-light-purple: rgba(50,0,255,0.5);
+    /*padding variales*/
+    --card-padding: 0.5rem;
+    --larger-padding: 2em;
+    /*margin-variables*/
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+    --margin-right: 1rem;
+    --margin-left: 1rem;
+    /*border-radius*/
+    --card-border-radius: 1rem;
+    /*logo img sizing */
+    --logo-img-width: 3rem;
+    --logo--img-height: 3rem;
+    /*logo text sizing*/
+    --logo-text-font-size: 1rem;
+    --logo-text-line-height: 1rem;
+    /*button sizing*/
+    --button-width: 2rem;
+    --button-height: 2rem;
+    /*--menu-items*/
+    --menu-item-bottom: 0.3rem;
+    --menu-item-line-height: 1.5rem;
+    --menu-item-radius: 0.2rem;
+    --menu-item-width: 6.5rem;
+    /*transition time*/
+    --fast-smooth-transition: 0.3s;
+    /*text-styling, don't repest colors, only text-muted
+    is valid here.*/
+    --text-muted: rgba(0,0,0,0.6);
+    /*notification bar*/
+    --notification-light: rgba(255,255,255,0.8);
+    --notification-dark: rgba(0,0,0,1);
+}
+
+/*general styling*/
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+.main{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    background-color: aliceblue;
+    opacity: 0.8;
+}
+/*my background-image*/
+.my-bg-img{
+    margin-top: 8rem;
+    margin-left: 19rem;
+    position: absolute;
+    width: 50%;
+    height: 80vh;
+    z-index: 20;
+}
+
+/*logo section*/
+.logo-section{
+    width: 15rem;
+    height: 100vh;
+    /*meant to have a background-image later*/
+    /*background-color: var(--color-white);*/
+    backgro5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    gap: 1rem;
+}
+.logo{
+    clip-path: circle(
+        100% at 0% 50%
+    );
+}
+.logo-name{
+    color: var(--color-blue-violet);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.first-title{
+    color: var(--color-blue);
+    font-weight: bolder;
+}
+
+/*The search section */
+.search-section{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Intro div*/
+.intro-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.intro-div h1{
+    color: var(--color-blue);
+}
+.intro-div .fa-cart-shopping{
+    color: var(--color-yellow-green);
+    font-size: 2rem;
+}
+
+/*search bar */
+.search-bar{
+    width: 30rem;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    border: 0.15rem solid var(--color-dark);
+}
+.search-input{
+    width:90%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+.search-input::placeholder{
+    font-size: 1.3rem;
+    color: var(--color-blue);
+    font-weight: bold;
+    text-align: center;
+}
+/*The button for searhing as well as you can press enter to search anything. */
+.search-bar button{
+    outline: none;
+    width: 10%;
+    height: 100%;
+    border: 0;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+.fa-magnifying-glass{
+    font-size: 1.7rem;
+    border: 0;
+}

@@ -3,22 +3,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="LandingPage.css">
     <link rel="icon" type="image/x-icon" href="CheapSokoLogo.PNG">
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web\css\all.min.css">
     <title>Home</title>
 </head>
 <body>
     <header>
         <div class="r-section">
             <img class="logo" src="CheapSokoLogo.PNG" alt="Logo">
-            <p class="r-section-text"><a href="#">Home</a></p>
+            <p class="r-section-text"><a class="logo-name" href="#"><span class="first-title">Cheap</span>Soko</a></p>
         </div>
-        <div class="l-section"></div>
+        <div class="l-section">
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">about</a>
+            <a href="#" class="menu-item">Contact Us</a>
+        </div>
     </header>
-    <div class="main">
-
+    <div class="after-header">
+        <aside>
+            <div class="logo-aside">
+    
+            </div>
+            <div class="sidebar">
+                <div class="menu-item">
+                    <div class="icon"><span class="fa fa-home"></span></div>
+                    <div class="menu-title">Home
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="icon"><span class="fa fa-people-carry-box"></span></div>
+                    <div class="menu-title">About
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="icon"><span class="fa fa-people-line"></span></div>
+                    <div class="menu-title">Contact-us
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="icon"><span class="fa fa-sign-out"></span></div>
+                    <div class="menu-title">
+                        Log-Out
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="middle-section">
+            <div class="intro-div"><span class="fa fa-cart-shopping"></span><h1>Shop For Less</h1></div>
+            <form action="post" class="search-bar">
+                <input type="text" name="search" class="search-input" placeholder="search anything">
+                <button type="submit"  class="submit-btn"><span class="fa fa-magnifying-glass"></span></button>
+            </form>          
+        </div>      
+        <!--This is for the ads diplay and all the other cool things the app has just sliding along-->
+        <div class="left-section"></div>
     </div>
     <div class="footer"></div>
 </body>
