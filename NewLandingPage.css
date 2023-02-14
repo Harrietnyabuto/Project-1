@@ -95,13 +95,12 @@ a{
     height: 100vh;
     /*meant to have a background-image later*/
     /*background-color: var(--color-white);*/
-    backgro5rem;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 5%;
-    gap: 1rem;
+    row-gap: 1rem;
 }
 .logo{
     clip-path: circle(
