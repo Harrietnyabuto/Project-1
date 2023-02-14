@@ -2,7 +2,7 @@
 :root{
     /*color variables*/
     --color-alice-blue: aliceblue;
-    --color-yellow-green : rgba(154,205,50,1);
+    --color-yellow-green : rgba(154,205,50,1); 
     --color-blue-violet: rgba(138,43,226,1);
     --color-white: rgba(255,255,255,1);
     --color-light: rgba(255,255,255,0.7);
@@ -21,6 +21,7 @@
     --color-light-pink: rgba(255,0,150,0.4);
     --color-purple: rgba(50,0,255,1);
     --color-light-purple: rgba(50,0,255,0.5);
+    --color-teal: rgb(21, 122, 87);
     /*padding variales*/
     --card-padding: 0.5rem;
     --larger-padding: 2em;
@@ -134,7 +135,7 @@ a{
     gap: 1rem;
 }
 .intro-div h1{
-    color: var(--color-blue);
+    color: var(--color-teal);
 }
 .intro-div .fa-cart-shopping{
     color: var(--color-yellow-green);
@@ -158,6 +159,9 @@ a{
     background-color: transparent;
     border: 0;
     outline: none;
+    font-weight: bold;
+    color: var(--color-black);
+    font-size: 1rem;
 }
 .search-input::placeholder{
     font-size: 1.3rem;

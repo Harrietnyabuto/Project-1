@@ -69,11 +69,14 @@ a{
 
 /*header */
 header{
+    position: sticky;
+    top: 0;
     display: flex;
     flex-wrap: wrap;
     /*I'll do the manual media screening for smaller screen sizes, since the flex style hasn't worked here. */
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(3rem);
 }
 header .page-title{
     color: var(--color-green);
@@ -131,7 +134,7 @@ header .page-title span.fa{
     font-size: 4rem;
     color: var(--color-red);
     z-index: 20;
-    position: absolute;
+    position: fixed;
     right: 0.3rem;
     top: 0rem;
     display: none;
@@ -144,7 +147,7 @@ header .page-title span.fa{
         visibility: hidden;
         background-color: var(--color-dark);
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0rem;
         right: 0rem;
         width: 10rem;
@@ -153,6 +156,7 @@ header .page-title span.fa{
         padding-top: 6rem;
         padding-left: 0;
         border: 0.2rem solid black;
+        z-index: 18;
     }
     .l-section hr{
         display: block;

@@ -20,6 +20,7 @@
     --color-light-pink: rgba(255,0,150,0.4);
     --color-purple: rgba(50,0,255,1);
     --color-light-purple: rgba(50,0,255,0.5);
+    --color-teal: rgba(67,118,100);
     /*padding variales*/
     --card-padding: 0.5rem;
     --larger-padding: 2em;
@@ -84,7 +85,7 @@ header{
 
 }
 header .menu-item{
-    color: var(--color-blue);
+    color: var(--color-teal);
 }
 header .menu-item:hover{
     color: var(--color-green);
@@ -146,7 +147,7 @@ aside{
     flex: 1 1 12rem;
     /*width: 12rem;*/
     height: 85vh;
-    background-color: var(--color-light-blue);
+    background-color: var(--color-teal);
     border-radius: var(--card-border-radius);
     box-shadow: 0.25rem 0.25rem 0.25rem var(--color-blue);
 }
@@ -209,7 +210,7 @@ aside .menu-title{
     flex: 1 1 58%;
     margin-right: 0;
     height: 70vh;
-    background-color: var(--color-blue);
+    background-color: var(--color-white);
     border-radius: 0.5rem;
     margin-left: 2rem;
 }
@@ -221,7 +222,7 @@ aside .menu-title{
     gap: 1rem;
 }
 .intro-div h1{
-    color: white;
+    color: teal;
 }
 .intro-div .fa-cart-shopping{
     color: var(--color-yellow-green);
@@ -235,25 +236,26 @@ aside .menu-title{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-white);
+    background-color: var(--color-teal);
     border-radius: 1rem;
 }
 .search-input{
     width:90%;
-    height: 100%;
-    background-color: transparent;
+    height: 80%;
+    background-color: teal;
     border: 0;
+    border-radius: 1rem;
     outline: none;
 }
 .search-input::placeholder{
     font-size: 1rem;
-    color: var(--color-blue);
+    color: var(--color-black);
     font-weight: bold;
 }
 /*The button for searhing as well as you can press enter to search anything. */
 .search-bar button{
     outline: none;
-    width: 10%;
+    width: 13%;
     height: 100%;
     border: 0;
     margin-left: -1rem;

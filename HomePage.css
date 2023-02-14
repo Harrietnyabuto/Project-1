@@ -1,6 +1,7 @@
 /*The root variables section*/
 :root{
     /*color variables*/
+    --color-yellow: rgba(255,255,0,1);
     --color-red: rgba(255,0,0,1);
     --color-alice-blue: aliceblue;
     --color-yellow-green : rgba(154,205,50,1);
@@ -58,13 +59,10 @@
 
 /*general styling*/
 body{
-    width: 100%;
-    min-height: auto;
     padding: 0;
     margin: 0;
     /*overflow: hidden;*/
     background-color: aliceblue;
-    background-image: linear-gradient(to right,var(--color-white),var(--color-light-purple));
 }
 a{
     text-decoration: none;
@@ -76,10 +74,12 @@ header{
     top: 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    /*I'll do the manual media screening for smaller screen sizes, since the flex style hasn't worked here. */
     justify-content: space-between;
+    align-items: center;
     backdrop-filter: blur(3rem);
 }
+
 header .page-title{
     color: var(--color-green);
     display: flex;
@@ -93,6 +93,21 @@ header .page-title span.fa{
 .l-section{
     font-size: 1.5rem;
     display: flex;
+    gap: 1.5rem;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+.l-section hr{
+    display: none;
+    visibility: hidden;
+}
+.l-section a:hover{
+    color: var(--color-green);
+}
+
+.l-section{
+    font-size: 1.5rem;
+    display: flex;
     padding-left: 2rem;
     width: 30rem;
     gap: 1.5rem;
@@ -102,8 +117,6 @@ header .page-title span.fa{
 }
 .l-section hr{
     width: 100%;
-    display: none;
-    visibility: hidden;
 }
 .drop-down-div{
     border: 0rem;
@@ -146,7 +159,7 @@ header .page-title span.fa{
         padding-left: 0;
         border: 0.2rem solid black;
         z-index: 18;
-    } 
+    }
     .l-section hr{
         display: block;
         visibility: visible;
@@ -164,9 +177,7 @@ header .page-title span.fa{
     display: block;
     visibility: visible;
 }
-.l-section a:hover{
-    color: var(--color-green);
-}
+
 
 /*logo section*/
 .logo-section{
@@ -192,32 +203,140 @@ header .page-title span.fa{
     color: var(--color-blue);
     font-weight: bolder;
 }
-.main-section{
-    padding-top: 3rem;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    top: 3rem;
-    width: 80%;
-    min-height: 80vh;
-    /*change the background image*/
-    background-color: transparent;
-    margin: auto;
-    row-gap: 3rem;
-    padding-bottom: 3rem;
-}
+
 body >h1{
-    color: var(--color-white);
+    color: var(--color-blue);
     text-align: center;
 }
-.main-section .contact-template{
-    width: 20rem;
-    height: 45vh;
-    background-color: var(--color-blue-violet);
-    border-radius: 0.5rem;
+.main-section{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    min-height:100vh;
+    margin: auto;
     text-align: center;
-    padding: 1rem;
     box-sizing: border-box;
+    padding: 1rem; 
+
+}
+.popular-services{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    padding-bottom: 2rem;
+}
+.main-section .product-template{
+    width: 20rem;
+    height: 30rem;
+    background-color: var(--color-dark);
+    border-radius: .3rem;
     box-shadow: 0.25rem 0.25rem 0.25rem var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.product-template img{
+    width: 100%;
+    height: 20rem;
+}
+.product-template .description-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.product-template .description-div div{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.product-template .fa-star, .fa-star-half{
+    color: var(--color-yellow);
+}
+.product-template .description-div p{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.product-template .description-div h2{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: var(--color-blue-violet);
+}
+.product-template .review-numbers{
+    color: var(--color-light-blue);
+}
+.product-template .price-details span{
+    color: var(--color-yellow);
+}
+.product-template .product-details{
+    width: 98%;
+    text-align: center;
+    height: 3.4rem;
+    margin: auto;
+    overflow: hidden;
+}
+.product-template .cart-div button{
+    width: 8rem;
+    height: 2.3rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-white);
+    font-weight: bolder;
+    color: blue;
+}
+.product-template .cart-div button:hover{
+    color: var(--color-white);
+    background-color: purple;
+}
+.main-section h1{
+    text-align: center;
+    color: var(--color-purple);
+}
+
+/*search bar */
+.search-bar{
+    width: 30rem;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    border: 0.15rem solid var(--color-dark);
+}
+.search-input{
+    width:90%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    color: var(--color-black);
+    font-size: 1rem;
+}
+.search-input::placeholder{
+    font-size: 1.3rem;
+    color: var(--color-blue);
+    font-weight: bold;
+    text-align: center;
+}
+/*The button for searhing as well as you can press enter to search anything. */
+.search-bar button{
+    outline: none;
+    width: 10%;
+    height: 100%;
+    border: 0;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+.fa-magnifying-glass{
+    font-size: 1.7rem;
+    border: 0;
 }
