@@ -1,6 +1,7 @@
 /*The root variables section*/
 :root{
     /*color variables*/
+    --color-teal: rgba(0,128,128,1);
     --color-red: rgba(255,0,0,1);
     --color-alice-blue: aliceblue;
     --color-yellow-green : rgba(154,205,50,1);
@@ -74,6 +75,7 @@ a{
 header{
     position: sticky;
     top: 0;
+    z-index: 8;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -193,31 +195,156 @@ header .page-title span.fa{
     font-weight: bolder;
 }
 .main-section{
-    padding-top: 3rem;
+    padding-top: 0rem;
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    top: 3rem;
-    width: 80%;
+    top: 1rem;
+    width: 70%;
     min-height: 80vh;
     /*change the background image*/
     background-color: transparent;
     margin: auto;
     row-gap: 3rem;
     padding-bottom: 3rem;
+    column-gap: 2rem;
 }
 body >h1{
     color: var(--color-white);
     text-align: center;
 }
-.main-section .contact-template{
-    width: 20rem;
-    height: 45vh;
-    background-color: var(--color-blue-violet);
-    border-radius: 0.5rem;
+body >h1 .fa{
+    color: var(--color-blue);
+}
+h3{
     text-align: center;
-    padding: 1rem;
+    color: var(--color-teal);
+}
+.left-side{
+    width: 20rem;
+    height: auto;
+    margin-left: 0.5rem;
+}
+.left-side p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--color-blue);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    gap: 0.5rem;
     box-sizing: border-box;
-    box-shadow: 0.25rem 0.25rem 0.25rem var(--color-blue);
+    margin-bottom: 1rem;
+}
+.left-side .title-section{
+    display: flex;
+    flex-direction: row;
+}
+.left-side span.details{
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.left-side .fa{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-purple);
+    border-radius: 1.7rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-white);
+    border: 0.2rem solid var(--color-dark) ;
+}
+
+/*Main section Right side */
+.right-side{
+    width: 35rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-top: 0;
+    margin-top: 0;
+}
+.right-side .contact-form{
+    margin-top: 0;
+    background-color: var(--color-white);
+    width: 80%;
+    height: 25rem;
+    box-sizing: border-box;
+}
+.input-section{
+    display: flex;
+    flex-direction: column;
+    padding : 0rem 2rem;
+    row-gap: 2rem;
+}
+.Input-field{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+input[name="MessageInput"]{
+    width: 80%;
+    height: 2;
+}
+.input-section input{
+    width: 80%;
+    height: 3rem;
+    color: var(--color-dark);
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 0.2rem solid var(--color-blue);
+    outline: none;
+}
+.input-section input::placeholder{
+    color: var(--color-light-blue);
+    font-weight: bold;
+}
+.input-section label{
+    font-weight: bold;
+}
+.input-section button{
+    width: 8rem;
+    height: 2.8rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-blue);
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.input-section button:hover{
+    background-color: var(--color-pink);
+}
+.right-side h1{
+    text-align: center;
+    color: var(--color-teal);
+}
+
+/*Map section*/
+.map-title{
+    color: var(--color-blue);
+}
+.map-title span{
+    color: var(--color-green);
+}
+.map-section{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border: 0.2rem solid var(--color-blue);
+    border-radius: 0.3rem;
+    box-shadow: 0.15rem 0.15rem 0.15rem var(--color-white);
+    box-shadow: box-sizing;
+    margin-bottom: 3rem;
 }
