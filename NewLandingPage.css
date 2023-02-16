@@ -81,11 +81,21 @@ a{
     opacity: 0.8;
 }
 /*my background-image*/
-.my-bg-img{
-    margin-top: 8rem;
-    margin-left: 19rem;
+.my-bg-div{
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-bg-img{
+    /*margin-top: 8rem;
+    margin-left: 19rem;*/
+    /*top: 8rem;
+    margin: auto;*/
+    /*width: 50%;*/
+    width: 38rem;
     height: 80vh;
     z-index: 20;
 }

@@ -1,6 +1,9 @@
 /*The root variables section*/
 :root{
     /*color variables*/
+    --color-twitter: rgba(71,135,242);
+    --color-whatsapp: rgba(22,244,80,1);
+    --color-instagram: rgba(232,191,7,1);
     --color-teal: rgba(0,128,128,1);
     --color-red: rgba(255,0,0,1);
     --color-alice-blue: aliceblue;
@@ -153,6 +156,21 @@ header .page-title span.fa{
         display: block;
         visibility: visible;
     }
+    /* commented for a while
+    .right-side{
+        padding-left: 0;
+        padding-right: 0;
+        width: 90rem;
+        height: auto;
+        border: 0.2rem solid black;
+    }
+    .right-side .contact-form{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        border: 0.2rem solid black;
+    }*/
     .fa-bars{
         display: inline;
         visibility: visible;
@@ -193,6 +211,25 @@ header .page-title span.fa{
 .first-title{
     color: var(--color-blue);
     font-weight: bolder;
+}
+.social-platforms{
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem; 
+}
+.social-platforms .fa{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-blue);
+}
+.social-platforms .fa-twitter{
+    color: var(--color-twitter);
+}
+.social-platforms .fa-instagram{
+    color: var(--color-instagram);
+}
+.social-platforms .fa-whatsapp{
+    color: var(--color-whatsapp);
 }
 .main-section{
     padding-top: 0rem;
@@ -244,6 +281,8 @@ h3{
 .left-side .title-section{
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    align-items: center;
 }
 .left-side span.details{
     color: var(--color-dark);
@@ -263,6 +302,10 @@ h3{
     background-color: var(--color-white);
     border: 0.2rem solid var(--color-dark) ;
 }
+.left-side .fa:hover{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
 
 /*Main section Right side */
 .right-side{
@@ -278,7 +321,7 @@ h3{
 .right-side .contact-form{
     margin-top: 0;
     background-color: var(--color-white);
-    width: 80%;
+    width: 23rem;
     height: 25rem;
     box-sizing: border-box;
 }
@@ -292,13 +335,14 @@ h3{
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+    position: relative;
 }
 input[name="MessageInput"]{
     width: 80%;
     height: 2;
 }
 .input-section input{
-    width: 80%;
+    width: 100%;
     height: 3rem;
     color: var(--color-dark);
     font-size: 1rem;
@@ -307,12 +351,21 @@ input[name="MessageInput"]{
     border-bottom: 0.2rem solid var(--color-blue);
     outline: none;
 }
+.input-section input:focus ~ label{
+    color: blue;
+    display: block;
+    visibility: visible;
+}
 .input-section input::placeholder{
     color: var(--color-light-blue);
     font-weight: bold;
 }
 .input-section label{
     font-weight: bold;
+    position: absolute;
+    top: -1rem;
+    display: none;
+    visibility: hidden;
 }
 .input-section button{
     width: 8rem;
@@ -339,7 +392,7 @@ input[name="MessageInput"]{
     color: var(--color-green);
 }
 .map-section{
-    width: fit-content;
+    width: 25rem;
     height: fit-content;
     margin: auto;
     border: 0.2rem solid var(--color-blue);
@@ -347,4 +400,7 @@ input[name="MessageInput"]{
     box-shadow: 0.15rem 0.15rem 0.15rem var(--color-white);
     box-shadow: box-sizing;
     margin-bottom: 3rem;
+}
+.map-section iframe{
+    width: 100%;
 }
