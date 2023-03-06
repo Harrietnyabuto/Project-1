@@ -26,6 +26,7 @@
     --color-light-pink: rgba(255,0,150,0.4);
     --color-purple: rgba(50,0,255,1);
     --color-light-purple: rgba(50,0,255,0.5);
+    --color-light-red: rgba(246,241,237,1);
     /*padding variales*/
     --card-padding: 0.5rem;
     --larger-padding: 2em;
@@ -68,7 +69,7 @@ body{
     margin: 0;
     /*overflow: hidden;*/
     background-color: aliceblue;
-    background-image: linear-gradient(to right,var(--color-white),var(--color-light-purple));
+    background-image: linear-gradient(to right,var(--color-white),var(--color-teal));
 }
 a{
     text-decoration: none;
@@ -117,7 +118,7 @@ header .page-title span.fa{
     cursor: pointer;
     font-size: 3.5rem;
     position: fixed;
-    color: var(--color-blue);
+    color: var(--color-teal);
     right: 0.3rem;
     top: 0rem;
     display: none;
@@ -189,24 +190,28 @@ header .page-title span.fa{
 }
 
 /*logo section*/
-.logo-section{
-    width: 15rem;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5%;
-    gap: 1rem;
-}
 .logo{
-    clip-path: circle(
-        100% at 0% 50%
-    );
-}
-.logo-name{
-    color: var(--color-blue-violet);
-    font-weight: bolder;
+    width: 7rem;
+    height: 7rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
     font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem solid black;
+    border-radius: 50%;
+    background-color: rgb(3, 112, 112);
+    border: 0.1rem;
+}
+.logo .first-text{
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    color: black;
+}
+.logo .second-text{
+    color: white;
+    margin-left: 2.4rem;
 }
 .first-title{
     color: var(--color-blue);
@@ -348,7 +353,7 @@ input[name="MessageInput"]{
     font-size: 1rem;
     font-weight: bold;
     border: 0;
-    border-bottom: 0.2rem solid var(--color-blue);
+    border-bottom: 0.2rem solid var(--color-teal);
     outline: none;
 }
 .input-section input:focus ~ label{
@@ -371,13 +376,13 @@ input[name="MessageInput"]{
     width: 8rem;
     height: 2.8rem;
     border-radius: 0.5rem;
-    background-color: var(--color-blue);
+    background-color: var(--color-teal);
     color: white;
     font-weight: bold;
     box-sizing: border-box;
 }
 .input-section button:hover{
-    background-color: var(--color-pink);
+    background-color: var(--color-blue);
 }
 .right-side h1{
     text-align: center;
@@ -389,7 +394,7 @@ input[name="MessageInput"]{
     color: var(--color-blue);
 }
 .map-title span{
-    color: var(--color-green);
+    color: var(--color-blue);
 }
 .map-section{
     width: 25rem;

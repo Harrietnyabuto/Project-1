@@ -133,9 +133,9 @@ header .menu-item:hover{
 
 
 /*aside css properties*/
-aside{
-    /*position sticky works fine in grids
-    fixed and absolute would mess up*/
+/*aside{
+    <position sticky works fine in grids
+    fixed and absolute would mess up>
     position: sticky;
     border: 0.1rem solid var(--color-dark);
     top: 0;
@@ -145,7 +145,7 @@ aside{
     margin-left: 0;
     backdrop-filter: blur(5em);
     flex: 1 1 12rem;
-    /*width: 12rem;*/
+    /*width: 12rem;>
     height: 85vh;
     background-color: var(--color-teal);
     border-radius: var(--card-border-radius);
@@ -178,7 +178,7 @@ aside .menu-item{
     padding: var(--card-padding);
     margin-bottom: var(--menu-item-bottom);
     border-radius: var(--menu-item-radius);
-    /*for a smoooth transition of all properties*/
+    /*for a smoooth transition of all properties
     transition: all var(--fast-smooth-transition);
 }
 aside .menu-item:hover{
@@ -195,7 +195,7 @@ aside .menu-item:hover{
 aside .menu-title{
     font-weight: bold;
     color: var(--color-light-dark);
-}
+}*/
 
 
 /*The main part*/
